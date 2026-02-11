@@ -1,0 +1,33 @@
+﻿database:
+  type: sqlite
+
+  sqlite:
+    file: data/variables.db
+
+  mysql:
+    host: 127.0.0.1
+    port: 3306
+    database: customvariable
+    username: root
+    password: pass
+    parameters: useSSL=false&characterEncoding=utf8
+
+  pool:
+    maximumPoolSize: 10
+    minimumIdle: 2
+    connectionTimeoutMs: 10000
+
+sync:
+  intervalSeconds: 30
+  batchSize: 200
+
+cache:
+  playerTtlSeconds: 600
+  playerMaxEntries: 5000
+
+runtime:
+  flushOnDisable: true
+
+placeholder:
+  missingPolicy: empty
+  missingLiteral: ''
